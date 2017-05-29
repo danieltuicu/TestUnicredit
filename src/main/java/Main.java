@@ -40,7 +40,12 @@ public class Main {
 
         // Prints the details of a ticket in json format
         get("/ticket_details/:id", (request, response) -> {
-            int id = Integer.parseInt(request.params("id"));
+            int id;
+            try {
+                id = Integer.parseInt(request.params("id"));
+            } catch (NumberFormatException e) {
+                id = -1;
+            }
 
             if (tickets.containsKey(id)) {
                 return gson.toJson(tickets.get(id));
@@ -52,7 +57,12 @@ public class Main {
 
         // Cancels a ticket
         post("/cancel_ticket/:id", (request, response) -> {
-            int id = Integer.parseInt(request.params("id"));
+            int id;
+            try {
+                id = Integer.parseInt(request.params("id"));
+            } catch (NumberFormatException e) {
+                id = -1;
+            }
 
             if (tickets.containsKey(id)) {
                 Ticket ticket = tickets.get(id);
@@ -79,7 +89,7 @@ public class Main {
         // Adds an event to the list. Requires a password.
         post("/add_event/:pass/:name", (request, response) -> {
             if (request.params("pass").equals(password)) {
-                if(!events.contains(request.params("name"))) {
+                if (!events.contains(request.params("name"))) {
                     events.add(request.params("name"));
                     return gson.toJson(new Response(request.params("name")));
                 } else {
@@ -94,7 +104,7 @@ public class Main {
         // Removes an event to the list. Requires a password.
         delete("/remove_event/:pass/:name", (request, response) -> {
             if (request.params("pass").equals(password)) {
-                if(events.contains(request.params("name"))) {
+                if (events.contains(request.params("name"))) {
                     events.remove(request.params("name"));
                     return gson.toJson(new Response("Successfully remvoed."));
                 } else {
