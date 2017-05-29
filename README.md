@@ -14,26 +14,25 @@ Spark si Gson.
 <p> Request-urile de tip GET pot fi facute intr-un browser, dar pentru cele de tip POST este nevoie de un client. Eu pentru testare am folosit extensia pentru Google Chrome: Advanced REST client. Request-urile trebuie scrise asemenea unor link-uri web (de exemplu http://localhost:4567/<endpoint>) in timp ce aplicatia ruleaza. </p>
 
 ##### Endpoints:
-* /buy_ticket/<name>  ->  Endpoint de tip POST. Adauga un bilet in baza de date doar daca parametrul <name> este un eveniment care se afla in lista de evenimente si intoarce un mesaj de succes impreuna cu ID-ul biletului. In caz de esec, intoarceun mesaj de eroare.  
+* /buy_ticket/:name  ->  Endpoint de tip POST. Adauga un bilet in baza de date doar daca parametrul <name> este un eveniment care se afla in lista de evenimente si intoarce un mesaj de succes impreuna cu ID-ul biletului. In caz de esec, intoarceun mesaj de eroare.  
 Exemplu de folosire: localhost:4567/buy_ticket/Queen
 
 * /list_events  ->  Endpoint de tip GET. Afiseaza lista evenimentelor pentru 
 care exista bilete in format Json.
 Exemplu de folosire: localhost:4567/list_events
 
-* /ticket_details/<ID>  ->  Endpoint de tip GET. Intoarce datele de pe biletul cu ID-ul introdus sau un mesaj de eroare in caz ca nu este inregistrat. 
+* /ticket_details/:ID  ->  Endpoint de tip GET. Intoarce datele de pe biletul cu ID-ul introdus sau un mesaj de eroare in caz ca nu este inregistrat. 
 Exemplu de folosire: localhost:4567/ticket_details/105
 
-* /cancel_ticket/<ID>  ->  Endpoint de tip POST. Anuleaza biletul cu ID-ul introdus. 
+* /cancel_ticket/:ID  ->  Endpoint de tip POST. Anuleaza biletul cu ID-ul introdus. 
 Exemplu de folosire: localhost:4567/cancel_ticket/105
 
 <p> Acestea au fost endpoint-urile cerute. Pe langa ele am mai adaugat 3 pe care le-am considerat importante. Toate acestea necesita si parola "pass123", deoarece modifica sau cer acces la bazele de date.</p>
 
-* /list_tickets/<password>  ->  Endpoint de tip GET. Intoarce lista tuturor biletelor cumparate in format Json.
+* /list_tickets/:password  ->  Endpoint de tip GET. Intoarce lista tuturor biletelor cumparate in format Json.
 Exemplu de folosire: localhost:4567/list_tickets/pass123
 
-* /add_event/<password>/<name>  ->  Endpoint de tip POST. Adauga in lista evenimentul <name>, daca nu exista deja.
+* /add_event/:password/:name  ->  Endpoint de tip POST. Adauga in lista evenimentul <name>, daca nu exista deja.
 Exemplu de folosire: localhost:4567/add_event/pass123/Aerosmith
 
-* /remove_event/<password>/<name> -> Endpoint de tip POST. Sterge un eveniment
-din lista daca exista.
+* /remove_event/:password/:name -> Endpoint de tip POST. Sterge un eveniment din lista daca exista.
