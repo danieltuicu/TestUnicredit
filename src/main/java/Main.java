@@ -20,7 +20,8 @@ public class Main {
             Ticket ticket;
 
             if (!events.contains(request.params("name"))) {
-                return "There is no " + request.params("name") + " event registered.";
+                response.status(400);
+                return gson.toJson(new Error("Event not registered."));
             }
 
             if (!canceledTickets.isEmpty()) {
@@ -31,9 +32,7 @@ public class Main {
                 ticket = new Ticket(request.params("name"));
                 tickets.put(ticket.getId(), ticket);
             }
-            return "Thank you for your purchasing a ticket for the " +
-                    request.params("name") + " event" +
-                    "\nYour ticket ID is " + ticket.getId() + ". Please keep it somewhere safe.";
+            return gson.toJson(ticket);
         });
 
         // Lists the currently available events
@@ -46,21 +45,24 @@ public class Main {
             if (tickets.containsKey(id)) {
                 return gson.toJson(tickets.get(id));
             } else {
-                return request.params("id") + " is not registered in our database.";
+                response.status(400);
+                return gson.toJson(new Error("Ticket not registered."));
             }
         });
 
         // Cancels a ticket
         post("/cancel_ticket/:id", (request, response) -> {
             int id = Integer.parseInt(request.params("id"));
+
             if (tickets.containsKey(id)) {
                 Ticket ticket = tickets.get(id);
                 tickets.remove(id);
                 canceledTickets.add(ticket);
 
-                return "Ticket nr. " + request.params("id") + " has been successfully canceled.";
+                return gson.toJson(new Response("Ticket successfully canceled"));
             } else {
-                return request.params("id") + " is not registered in our database.";
+                response.status(400);
+                return gson.toJson(new Error("Ticket not registered."));
             }
         });
 
@@ -69,7 +71,8 @@ public class Main {
             if (request.params("pass").equals(password)) {
                 return gson.toJson(tickets);
             }
-            return "Password incorrect. You don't have access to this database.";
+            response.status(401);
+            return gson.toJson(new Error("Password incorrect."));
 
         });
 
@@ -78,25 +81,29 @@ public class Main {
             if (request.params("pass").equals(password)) {
                 if(!events.contains(request.params("name"))) {
                     events.add(request.params("name"));
-                    return "Entry for event " + request.params("name") + " successfully added.";
+                    return gson.toJson(new Response(request.params("name")));
                 } else {
-                    return request.params("name") + " event already registered.";
+                    response.status(409);
+                    return gson.toJson(new Error("Event already registered."));
                 }
             }
-            return "Password incorrect. You don't have access to this command.";
+            response.status(401);
+            return gson.toJson(new Error("Password incorrect"));
         });
 
         // Removes an event to the list. Requires a password.
-        post("/remove_event/:pass/:name", (request, response) -> {
+        delete("/remove_event/:pass/:name", (request, response) -> {
             if (request.params("pass").equals(password)) {
                 if(events.contains(request.params("name"))) {
                     events.remove(request.params("name"));
-                    return "Entry for event " + request.params("name") + " successfully removed.";
+                    return gson.toJson(new Response("Successfully remvoed."));
                 } else {
-                    return "Entry for event " + request.params("name") + " not found.";
+                    response.status(400);
+                    return gson.toJson(new Error("Event not found."));
                 }
             }
-            return "Password incorrect. You don't have access to this command.";
+            response.status(401);
+            return gson.toJson(new Error("Password incorrect"));
         });
     }
 }
