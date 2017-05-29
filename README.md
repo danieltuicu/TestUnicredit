@@ -5,7 +5,7 @@
 <p> Aplicatia a fost implementata in Java 1.8 cu ajutorul Intellij IDEA. Proiectul foloseste Maven, Java Spark si Gson. </p>
 
 ##### Descrierea claselor si a structurilor de date:
-<p> 	Au fost folosite 5 clase de baza: Ticket, Error, Response si clasa Main.</p> 
+<p> 	Au fost folosite 4 clase de baza: Ticket, Error, Response si clasa Main.</p> 
 <p> Clasa Ticket are 3 elemente importante: un id unic, numele evenimentului pentru care este luat biletul si un generator care asigura unicitatea id-ului. ID-urile incep de la 100. <p>
 <p> Clasa Response este folosita la raspunsul serverului in caz de succes dupa executarea unui request. </p>
 <p> Clasa Error mosteneste Response si este folosita pentru request-uri esuate.</p>
@@ -13,7 +13,9 @@
 <p> Evenimentele sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
 
 ##### Rularea programului si a comenzilor:
-<p> Pentru executarea efectiva a programului se poate folosi urmatoare comanda in cmd: mvn clean package exec:java </p>
+<p> Pentru executarea efectiva a programului se poate folosi urmatoare comanda in cmd: <b>mvn clean package exec:java</b> </p>
+
+
 
 <p> Request-urile de tip GET pot fi facute intr-un browser, dar pentru cele de tip POST este nevoie de un client. Eu pentru testare am folosit extensia pentru Google Chrome: Advanced REST client. Request-urile trebuie scrise asemenea unor link-uri web (de exemplu http://localhost:4567/:endpoint) in timp ce aplicatia ruleaza. </p>
 
