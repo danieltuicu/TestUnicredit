@@ -2,8 +2,7 @@
 #### Tuicu Daniel-George
 
 ##### Tehnologii folosite:
-	Aplicatia a fost implementata in Java 1.8. Proiectul foloseste Maven, Java
-Spark si Gson.  
+<p> Aplicatia a fost implementata in Java 1.8. Proiectul foloseste Maven, Java Spark si Gson. </p>
 ##### Descrierea claselor si a structurilor de date:
 <p> 	Au fost folosite 2 clase de baza: clasa Ticket si clasa Main.</p> 
 <p> Clasa Ticket are 3 elemente importante: un id unic, numele evenimentului pentru care este luat biletul si un generator care asigura unicitatea id-ului. ID-urile incep de la 100. <p>
