@@ -5,16 +5,10 @@
 	Aplicatia a fost implementata in Java 1.8. Proiectul foloseste Maven, Java
 Spark si Gson.  
 ##### Descrierea claselor si a structurilor de date:
-	Au fost folosite 2 clase de baza: clasa Ticket si clasa Main.
-	Clasa Ticket are 3 elemente importante: un id unic, numele evenimentului
-pentru care este luat biletul si un generator care asigura unicitatea id-ului.
-ID-urile incep de la 100.
-	Clasa Main contine toate endpoint-urile cerute, plus inca 3 pe care le-am
-considerat importante. Datele sunt salvate intr-un HashMap pentru bilete, res-
-pectiv intr-un LinkedList pentru biletele anulate de unde pot fi refolosite
-pentru alte evenimente, fara a genera mereu un alt bilet cu un ID nou. Progra-
-mul se deschide automat cu 5 evenimente disponibile, retinute intr-un Arraylist.
-Evenimentele sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce".
+<p> 	Au fost folosite 2 clase de baza: clasa Ticket si clasa Main.</p> 
+<p> Clasa Ticket are 3 elemente importante: un id unic, numele evenimentului pentru care este luat biletul si un generator care asigura unicitatea id-ului. ID-urile incep de la 100. <p>
+<p> Clasa Main contine toate endpoint-urile cerute, plus inca 3 pe care le-am considerat importante. Datele sunt salvate intr-un HashMap pentru bilete, respectiv intr-un LinkedList pentru biletele anulate de unde pot fi refolosite pentru alte evenimente, fara a genera mereu un alt bilet cu un ID nou. Programul se deschide automat cu 5 evenimente disponibile, retinute intr-un Arraylist. </p>
+<p. Evenimentele sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
 
 ##### Rularea programului si a comenzilor:
 	Request-urile de tip GET pot fi facute intr-un browser, dar pentru cele de
