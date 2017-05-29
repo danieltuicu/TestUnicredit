@@ -1,5 +1,4 @@
-# TestUnicredit
-RESTful Web Services Application – Vanzare Bilete
+# RESTful Web Services Application – Vanzare Bilete
 Tuicu Daniel-George
 
   	Tehnologii folosite:
