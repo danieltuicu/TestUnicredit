@@ -8,7 +8,7 @@
 <p> 	Au fost folosite 2 clase de baza: clasa Ticket si clasa Main.</p> 
 <p> Clasa Ticket are 3 elemente importante: un id unic, numele evenimentului pentru care este luat biletul si un generator care asigura unicitatea id-ului. ID-urile incep de la 100. <p>
 <p> Clasa Main contine toate endpoint-urile cerute, plus inca 3 pe care le-am considerat importante. Datele sunt salvate intr-un HashMap pentru bilete, respectiv intr-un LinkedList pentru biletele anulate de unde pot fi refolosite pentru alte evenimente, fara a genera mereu un alt bilet cu un ID nou. Programul se deschide automat cu 5 evenimente disponibile, retinute intr-un Arraylist. </p>
-<p. Evenimentele sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
+<p> Evenimentele sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
 
 ##### Rularea programului si a comenzilor:
 <p> Request-urile de tip GET pot fi facute intr-un browser, dar pentru cele de tip POST este nevoie de un client. Eu pentru testare am folosit extensia pentru Google Chrome: Advanced REST client. Request-urile trebuie scrise asemenea unor link-uri web (de exemplu http://localhost:4567/<endpoint>) in timp ce aplicatia ruleaza. </p>
