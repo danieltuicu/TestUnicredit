@@ -38,4 +38,4 @@ care exista bilete in format Json.
 * /add_event/:password/:name  ->  Endpoint de tip POST. Adauga in lista evenimentul <name>, daca nu exista deja.
 *<p> Exemplu de folosire: localhost:4567/add_event/pass123/Aerosmith </p>*
 
-* /remove_event/:password/:name -> Endpoint de tip POST. Sterge un eveniment din lista daca exista.
+* /remove_event/:password/:name -> Endpoint de tip DELETE. Sterge un eveniment din lista daca exista.
