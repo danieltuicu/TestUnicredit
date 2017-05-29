@@ -21,23 +21,18 @@ Exemplu de folosire: localhost:4567/buy_ticket/Queen
 care exista bilete in format Json.
 Exemplu de folosire: localhost:4567/list_events
 
-* /ticket_details/<ID>  ->  Endpoint de tip GET. Intoarce datele de pe biletul
-cu ID-ul introdus sau un mesaj de eroare in caz ca nu este inregistrat. 
+* /ticket_details/<ID>  ->  Endpoint de tip GET. Intoarce datele de pe biletul cu ID-ul introdus sau un mesaj de eroare in caz ca nu este inregistrat. 
 Exemplu de folosire: localhost:4567/ticket_details/105
 
-* /cancel_ticket/<ID>  ->  Endpoint de tip POST. Anuleaza biletul cu ID-ul in-
-trodus. Exemplu de folosire: localhost:4567/cancel_ticket/105
+* /cancel_ticket/<ID>  ->  Endpoint de tip POST. Anuleaza biletul cu ID-ul introdus. 
+Exemplu de folosire: localhost:4567/cancel_ticket/105
 
-	Acestea au fost endpoint-urile cerute. Pe langa ele am mai adaugat 3 pe ca-
-re le-am considerat importante. Toate acestea necesita si parola "pass123", de-
-oarece modifica sau cer acces la bazele de date.
+<p> Acestea au fost endpoint-urile cerute. Pe langa ele am mai adaugat 3 pe care le-am considerat importante. Toate acestea necesita si parola "pass123", deoarece modifica sau cer acces la bazele de date.</p>
 
-* /list_tickets/<password>  ->  Endpoint de tip GET. Intoarce lista tuturor bi-
-letelor cumparate in format Json.
+* /list_tickets/<password>  ->  Endpoint de tip GET. Intoarce lista tuturor biletelor cumparate in format Json.
 Exemplu de folosire: localhost:4567/list_tickets/pass123
 
-* /add_event/<password>/<name>  ->  Endpoint de tip POST. Adauga in lista eve-
-nimentul <name>, daca nu exista deja.
+* /add_event/<password>/<name>  ->  Endpoint de tip POST. Adauga in lista evenimentul <name>, daca nu exista deja.
 Exemplu de folosire: localhost:4567/add_event/pass123/Aerosmith
 
 * /remove_event/<password>/<name> -> Endpoint de tip POST. Sterge un eveniment
