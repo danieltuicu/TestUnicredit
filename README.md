@@ -10,7 +10,7 @@
 <p> Clasa Response este folosita la raspunsul serverului in caz de succes dupa executarea unui request. </p>
 <p> Clasa Error mosteneste Response si este folosita pentru request-uri esuate.</p>
 <p> Clasa Main contine toate endpoint-urile cerute, plus inca 3 pe care le-am considerat importante. Datele sunt salvate intr-un HashMap pentru bilete, respectiv intr-un LinkedList pentru biletele anulate de unde pot fi refolosite pentru alte evenimente, fara a genera mereu un alt bilet cu un ID nou. Programul se deschide automat cu 5 evenimente disponibile, retinute intr-un Arraylist. </p>
-<p> Evenimentele sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
+<p> Evenimentele implicite sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
 
 ##### Rularea programului si a comenzilor:
 <p> Pentru executarea efectiva a programului se poate folosi urmatoare comanda in cmd: <b>mvn clean package exec:java</b> </p>
