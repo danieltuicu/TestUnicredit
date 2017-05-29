@@ -5,8 +5,10 @@
 <p> Aplicatia a fost implementata in Java 1.8 cu ajutorul Intellij IDEA. Proiectul foloseste Maven, Java Spark si Gson. </p>
 
 ##### Descrierea claselor si a structurilor de date:
-<p> 	Au fost folosite 2 clase de baza: clasa Ticket si clasa Main.</p> 
+<p> 	Au fost folosite 5 clase de baza: Ticket, Error, Response si clasa Main.</p> 
 <p> Clasa Ticket are 3 elemente importante: un id unic, numele evenimentului pentru care este luat biletul si un generator care asigura unicitatea id-ului. ID-urile incep de la 100. <p>
+<p> Clasa Response este folosita la raspunsul serverului in caz de succes dupa executarea unui request. </p>
+<p> Clasa Error mosteneste Response si este folosita pentru request-uri esuate.</p>
 <p> Clasa Main contine toate endpoint-urile cerute, plus inca 3 pe care le-am considerat importante. Datele sunt salvate intr-un HashMap pentru bilete, respectiv intr-un LinkedList pentru biletele anulate de unde pot fi refolosite pentru alte evenimente, fara a genera mereu un alt bilet cu un ID nou. Programul se deschide automat cu 5 evenimente disponibile, retinute intr-un Arraylist. </p>
 <p> Evenimentele sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
 
