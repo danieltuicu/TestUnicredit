@@ -11,6 +11,8 @@
 <p> Evenimentele sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
 
 ##### Rularea programului si a comenzilor:
+<p> Pentru executarea efectiva a programului se poate folosi urmatoare comanda in cmd: mvn clean package exec:java </p>
+
 <p> Request-urile de tip GET pot fi facute intr-un browser, dar pentru cele de tip POST este nevoie de un client. Eu pentru testare am folosit extensia pentru Google Chrome: Advanced REST client. Request-urile trebuie scrise asemenea unor link-uri web (de exemplu http://localhost:4567/:endpoint) in timp ce aplicatia ruleaza. </p>
 
 ##### Endpoints:
