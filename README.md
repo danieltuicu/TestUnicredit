@@ -2,7 +2,7 @@
 #### Tuicu Daniel-George
 
 ##### Tehnologii folosite:
-<p> Aplicatia a fost implementata in Java 1.8. Proiectul foloseste Maven, Java Spark si Gson. </p>
+<p> Aplicatia a fost implementata in Java 1.8 cu ajutorul Intellij IDEA. Proiectul foloseste Maven, Java Spark si Gson. </p>
 
 ##### Descrierea claselor si a structurilor de date:
 <p> 	Au fost folosite 2 clase de baza: clasa Ticket si clasa Main.</p> 
