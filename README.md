@@ -13,7 +13,7 @@
 <p> Evenimentele implicite sunt: "Metallica", "Queen", "Slipknot", "Nightwish", "Dragonforce". </p>
 
 ##### Rularea programului si a comenzilor:
-<p> Pentru executarea efectiva a programului se poate folosi urmatoare comanda in folderul radacina din cmd: <b>mvn clean package exec:java</b> </p>
+<p> Pentru executarea efectiva a programului se poate folosi urmatoare comanda in folderul radacina din cmd:<br> <b>mvn clean package exec:java</b> </p>
 
 
 
