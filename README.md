@@ -21,10 +21,10 @@ Exemplu de folosire: localhost:4567/buy_ticket/Queen
 care exista bilete in format Json.
 Exemplu de folosire: localhost:4567/list_events
 
-* /ticket_details/:ID  ->  Endpoint de tip GET. Intoarce datele de pe biletul cu ID-ul introdus sau un mesaj de eroare in caz ca nu este inregistrat. 
+* /ticket_details/:id  ->  Endpoint de tip GET. Intoarce datele de pe biletul cu ID-ul introdus sau un mesaj de eroare in caz ca nu este inregistrat. 
 Exemplu de folosire: localhost:4567/ticket_details/105
 
-* /cancel_ticket/:ID  ->  Endpoint de tip POST. Anuleaza biletul cu ID-ul introdus. 
+* /cancel_ticket/:id  ->  Endpoint de tip POST. Anuleaza biletul cu ID-ul introdus. 
 Exemplu de folosire: localhost:4567/cancel_ticket/105
 
 <p> Acestea au fost endpoint-urile cerute. Pe langa ele am mai adaugat 3 pe care le-am considerat importante. Toate acestea necesita si parola "pass123", deoarece modifica sau cer acces la bazele de date.</p>
