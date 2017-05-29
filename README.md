@@ -3,6 +3,7 @@
 
 ##### Tehnologii folosite:
 <p> Aplicatia a fost implementata in Java 1.8. Proiectul foloseste Maven, Java Spark si Gson. </p>
+
 ##### Descrierea claselor si a structurilor de date:
 <p> 	Au fost folosite 2 clase de baza: clasa Ticket si clasa Main.</p> 
 <p> Clasa Ticket are 3 elemente importante: un id unic, numele evenimentului pentru care este luat biletul si un generator care asigura unicitatea id-ului. ID-urile incep de la 100. <p>
@@ -26,6 +27,7 @@ Exemplu de folosire: localhost:4567/ticket_details/105
 * /cancel_ticket/:id  ->  Endpoint de tip POST. Anuleaza biletul cu ID-ul introdus. 
 Exemplu de folosire: localhost:4567/cancel_ticket/105
 
+##### Extra
 <p> Acestea au fost endpoint-urile cerute. Pe langa ele am mai adaugat 3 pe care le-am considerat importante. Toate acestea necesita si parola "pass123", deoarece modifica sau cer acces la bazele de date.</p>
 
 * /list_tickets/:password  ->  Endpoint de tip GET. Intoarce lista tuturor biletelor cumparate in format Json.
